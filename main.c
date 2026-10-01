@@ -1,17 +1,15 @@
 #include <stdio.h>
 
 int main(void) {
-    int num;
+    int x;
 
     printf("정수 하나를 입력하시오 :");
-    scanf("%d", &num);
+    scanf("%d", &x);
 
-    if (num > 0)
-        printf("양수입니다.");
-    else if (num < 0)
-        printf("음수입니다.");
-    else
-        printf("0 입니다.");
+    if (x<0)
+        x = -x;
+
+    printf("절대값은 %d입니다.", x);
 
     return 0;
 
