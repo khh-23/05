@@ -1,18 +1,22 @@
 #include <stdio.h>
 
 int main(void) {
-    int sum=0, num, i;
+    int x, y;
+    char c;
 
-    printf("input a number : ");
-    scanf("%d", &num);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &x, &c, &y);
 
-    for (i=0;i<=num;i++)
-    {
-        sum += i;
-    }
+    if (c=='+')
+        printf("%d + %d = %d", x, y, x+y);
+    else if (c=='-')
+        printf("%d - %d = %d", x, y, x-y);
+    else if (c=='*')
+        printf("%d * %d = %d", x, y, x*y);
+    else
+        printf("%d / %d = %d", x, y, x/y);
     
-    printf("The result is : %d",sum);
-
+    
 return 0;
 
 }
